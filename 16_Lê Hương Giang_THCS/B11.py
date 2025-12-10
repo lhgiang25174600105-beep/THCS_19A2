@@ -1,0 +1,5 @@
+a = float(input("Nhập số a: "))
+b = float(input("Nhập số b: "))
+c = float(input("Nhập số c: "))
+tich = lambda a, b, c : a*b*c
+print(tich(a,b,c))
