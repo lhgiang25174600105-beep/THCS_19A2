@@ -1,21 +1,16 @@
-tu= int(input("Nhập mẫu số: "))
-mau = int(input("Nhập tử số: "))
+n = input("Nhập chuỗi n: ")
+result = ""
+space = False
+started = False
 
-if mau == 0 :
-    print("Không tồn tại")
-else :
-    a = abs(tu)
-    b = abs(mau)
+for i in n:
+    if i != ' ':
+        result += i
+        space = False
+        started = True
+    else:
+        if started and not space:
+            result += ' '
+            space = True
 
-    while b != 0 :
-        a,b = b, a%b
-    ucln = a 
-
-rgtu = tu // ucln
-rgmau = mau // ucln
-
-if rgmau < 0 :
-    rgtu = - rgtu
-    rgmau = - rgmau
-
-print("phân số tối giản", rgtu, "/", rgmau)
+print(result)

@@ -1,22 +1,19 @@
-i = int(input("Nhập i: "))
+n = int(input("Nhập số lượng phần tử: "))
 
-s1 = 0
-for t in range(1,i+1):
-    s1 += i 
+ket_qua = []   # danh sách rỗng
 
-s2 = 1
-for t in range(1,i):
-    s2 *= i
+for i in range(n):
+    x = int(input("Nhập phần tử: "))
 
-s3 = 0
-for t in range(1, i+1):
-    s3 += ((-1)** (i+1))/i
+    da_ton_tai = False
+    for y in ket_qua:
+        if x == y:
+            da_ton_tai = True
+            break
 
-s4 = 0
-for k in range(0,i+1):
-    s4 += k/ (k+2)
+    if  da_ton_tai== False:
+        ket_qua = ket_qua + [x]   # tạo danh sách mới có thêm x 
+        
 
-print("S1: ", s1)
-print("S2: ", s2)
-print("S3: ", s3 )
-print("S4: ", s4)
+print("Danh sách sau khi loại bỏ phần tử trùng lặp:")
+print(ket_qua)

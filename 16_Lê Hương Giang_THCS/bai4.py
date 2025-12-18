@@ -1,9 +1,15 @@
-i = int(input("Nhập i: "))
-for n in range(2, i) :
-    nguyen_to = True
-    for i in range(2, n) :
-        if n % i == 0 :
-            nguyen_to = False
-            break
-    if nguyen_to :
-            print(n, end= "")
+x = int(input("Nhập số thứ 1: "))
+lon_nhat = x
+lon_thu_hai = x
+
+# Nhập các số còn lại
+for i in range(2, x + 1):
+    print("Nhập số thứ", i)
+    x = int(input())
+    if x > lon_nhat:
+        lon_thu_hai = lon_nhat
+        lon_nhat = x
+    elif x < lon_nhat and x > lon_thu_hai:
+        lon_thu_hai = x
+
+print("Số lớn thứ hai là:", lon_thu_hai)
